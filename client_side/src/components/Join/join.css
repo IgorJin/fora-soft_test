@@ -1,0 +1,46 @@
+.join {
+    height: 100vh;
+    background-color: rgb(71, 68, 145);
+}
+.join .title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+.joinInnerContainer{
+    padding: 20px 30px;
+    width: 720px;
+    margin: 0 auto;
+}
+.joinInnerBg{
+    background: no-repeat center/contain url('../../images/video-conf.jpg');
+    height: 80vh;
+    position: relative;
+}
+.joinInnerBg input{
+    position: absolute;
+    top: 45%;
+    width: 400px;
+    left: calc( 50% - 200px );
+    height: 45px;
+    border-radius: 12px;
+    padding: 0 15px;
+}
+.joinInnerBg button{
+    background-color: yellow;
+    padding: 12px 25px;
+    border-radius: 25px;
+    position: absolute;
+    top: calc(45% + 55px);
+    left: calc( 50% - 100px );
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+.joinInnerBg button:hover{
+    filter: brightness(120%);
+    transform: translateY(-1px);
+}

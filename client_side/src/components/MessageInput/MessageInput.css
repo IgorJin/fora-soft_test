@@ -1,0 +1,44 @@
+.input_message{
+    margin-top: 30px;
+  height: 55px;
+  width: 100%;
+  }
+  .input_message__block{
+  border-radius: 25px;
+  border: 1px solid #efeff7;
+  padding: 15px 33px;
+  position: relative;
+  }
+  
+  @keyframes bounce {
+  from {
+      transform: scale(1) rotateZ(0);
+    animation-timing-function: ease-out;
+  }
+  33% {
+        transform: rotateZ(-15deg) scale(1.20);
+    animation-timing-function: ease-in;
+  }
+  66% {
+        transform: rotateZ(25deg) scale(1.20);
+    animation-timing-function: ease-in;
+  }
+  to {  
+    transform: scale(1) rotateZ(0);
+  }
+  }
+  
+  .input_message .send_message{
+   cursor: pointer;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: no-repeat center/contain url('../../images/email.svg') ;
+  position: absolute;
+    top: 5px;
+    right: 15px;
+   
+  }
+  .input_message .send_message:hover{
+   animation: bounce 0.8s ease-in-out;
+  }

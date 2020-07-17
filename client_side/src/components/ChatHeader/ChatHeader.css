@@ -1,0 +1,70 @@
+.chat__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    }
+    .chat__header .title{
+      font-size: 29px;
+      color: #313439;
+      position: relative;
+      font-weight: 800;
+    }
+    .chat__header .title::before{
+    content: '';
+    height: 3px;
+    width: 35px;
+      border-radius: 25%;
+    background-color: #2e4bdc;
+    position: absolute;
+    bottom: -5px;
+    }
+
+    .chat__header .users{
+        cursor: pointer;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: no-repeat center/contain url('../../images/user.svg') ;
+        vertical-align: middle;
+        }
+        .users_list{
+        position: absolute;
+        max-height: 80vh;
+        overflow-y: scroll;
+        right: 23px;
+          top: 80%;
+        width: 250px;
+        padding: 20px 30px;
+            background-color: rgb(87, 134, 244); 
+            z-index: 10;
+            border-radius: 15px;
+            border-top-right-radius:0;
+        }
+        .users_list .user_list_user {
+        color: white;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .users_list .user_list_user:not(:last-child){
+        margin-bottom: 20px;
+        }
+        .users_list .call_icon{
+        cursor: pointer;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: no-repeat center/contain url('../../images/video-call.svg') ;
+        vertical-align: middle;
+        }
+        .cant_call_yself{
+            display: inline-block;
+        width: 20px;
+        height: 20px;
+        }
+        .users_list .user__icon{
+          background-color: #2e4bdc;
+        } 

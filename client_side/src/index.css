@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF UI Display Light'), url('./fonts/sf-ui-display-light-58646b33e0551.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 500;
+  src: local('SF UI Display Medium'), url('./fonts/sf-ui-display-medium-58646be638f96.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 600;
+  src: local('SF UI Display Semibold'), url('./fonts/sf-ui-display-semibold-58646eddcae92.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('SF UI Display Bold'), url('./fonts/sf-ui-display-bold-58646a511e3d9.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 800;
+  src: local('SF UI Display Heavy'), url('./fonts/sf-ui-display-heavy-586470160b9e5.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 300;
+  src: local('SF UI Display Thin'), url('./fonts/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+}
+html,.body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+html *{
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  font-family: SF UI Display;
+  font-style: normal;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+.body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  position:relative;
+  color: #565656;
+  background:#FFF;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+}
+a{
+  text-decoration: none;
+  color:#1d1d1d;
+  transition: all 0.3s ease;
+}
+ul li{
+  list-style-type: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a img {
+  border: 0;
+}
+input{
+  width: 100%;
+  height: auto;
+  border: none;
+}
+::placeholder{
+color:  #a5a6a5;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  background-color: #2e4bdc;
+}    
+
+.chat{
+ width: 75%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 35px 40px;
+height: 100vh;
+}
+
+
+
+
+.blue_button{
+color: white;
+display: inline-block;
+background-color: #4261f4;
+border-radius: 15px;
+padding: 8px 35px;
+margin-right: 25px;
+cursor: pointer;
+font-weight: 500;
+transition: all 0.5s;
+box-sizing: border-box;
+}
+.blue_button:hover{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 2px #2e4bdc;
+}
+.room_link {
+  position: absolute;
+  font-size: 18px;
+  /* margin: 5px; */
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #2e4bdc;
+  color: #2e4bdc;
+}
+
+
+/* video */
+.videoCall_window__bg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 20;
+}
+.videoCall_window{
+  position: absolute;
+  z-index: 21;
+  width: 80vw;
+  left: 10vw;
+  height: 80vh;
+  top: 10vh;
+  background-color: white;
+}
+.videoCall_window .inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.videoCall_window .inner_text{
+  padding: 60px;
+  text-align: center;
+}
+.videoCall_window .inner_text h1{
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+.videoCall_window .inner_text span{
+  font-weight: bold;
+}
+.videoCall_window .inner_text button{
+  font-size: 28px;
+  margin-bottom: 25px;
+  border: none;
+  margin-right: 0;
+}
+.userVideo{
+  width: 100%;
+    height: 100%;
+  background-color: #eff3fc;
+}
+.recipVideo{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 15vw;
+  background-color: #a5a6a5;
+}
+
+.hidden{
+display: none;
+}
+
+
+
+/* blue #4261f4, dark-blue: #2e4bdc, green: #1bb66b; message: #eff3fc, border: #efeff7, placeholder: #a5a6a5, avatar-bg: #5a86f7; title- #313439; text - #63656b*/

@@ -1,0 +1,98 @@
+.leftbar{
+    width: 25%;
+    display: inline-block;
+    background: rgb(66,97,244);
+    background: linear-gradient(0deg, rgba(66,97,244,1) 0%, rgba(66,105,244,0.98) 84%);
+    padding: 50px 25px;
+    }
+    .leftbar .search{
+    width: 100%;
+    background-color: #2e4bdc;
+    height: 40px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    padding: 13px 25px;
+    position: relative;
+    bottom: 12px;
+      right: 15px;
+    }
+    .leftbar .search input{
+    background-color: #2e4bdc;
+    color: white;
+    }
+    
+    .leftbar .search__icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: no-repeat center/contain url('../../images/search.svg') ;
+    position: absolute;
+    cursor: pointer;
+    }
+    
+    .rooms_list{
+    padding: 0 10px;
+    }
+    .room_card{
+    cursor: pointer;
+    position: relative;
+    }
+    .room_card:not(:last-child){
+    margin-bottom: 35px;
+    }
+    .room_card.active:before, .room_card:not(.active):hover:before{
+    content: '';
+    left: -20px;
+    right: -35px;
+    bottom: -10px;
+    top: -10px;
+    background-color: #2e4bdc;
+    position: absolute;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    }
+    .room_card:not(.active):hover:before{
+    filter: brightness(120%);
+    }
+    .user__icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(87, 134, 244);
+    margin-right: 12px;
+    vertical-align: middle;
+    position: relative;
+    }
+    .user__icon.on_mess{
+    position: absolute;
+      bottom: 0;
+    }
+    .user__icon span{
+    box-sizing: border-box;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 3px solid white;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
+    }
+    .user__icon .circle{
+    border-radius: 50%;
+    }
+    .user__icon .rhombus{
+    transform: rotateZ(45deg);
+    }
+    
+    .user_mess .user__icon{
+      display: none;
+    }
+    .room_card__name{
+    color: white;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    }
+    

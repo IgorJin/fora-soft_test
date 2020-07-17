@@ -37,19 +37,28 @@ io.on('connect', (socket) => {
         io.emit('roomsInDaChat', { rooms: getRooms() })
     })
 
-     socket.on('sendMessage', (message)=>{
+    socket.on('sendMessage', (message)=>{
         const user = getUser(socket.id)
         io.to(user.roomId).emit('message', { user: user.id, text: message, ava: user.ava });
-     }) 
+    }) 
 
-     socket.on('disconnect', () => {
+    socket.on('disconnect', () => {
         const user = removeUser(socket.id);
-    
+
         if(user) {
-          io.to(user.room).emit('message', { user: 'admin', text: `${user.name} покинул чат.` });
-          io.to(user.room).emit('roomData', { room: user.roomId, users: getUsersInRoom(user.roomId)});
+            io.to(user.room).emit('message', { user: 'admin', text: `${user.name} покинул чат.` });
+            io.to(user.room).emit('roomData', { room: user.roomId, users: getUsersInRoom(user.roomId)});
         }
-      })
+    })
+    
+    socket.on("callUser", (data) => {
+        const user = getUser(data.from)
+        io.to(data.to).emit('outgoing', { signal: data.signalData, from: data.from, fromName:user.name });
+    })
+
+    socket.on("acceptCall", (data) => {
+        io.to(data.to).emit('callAccepted', data.signal);
+    })
 })
 
 server.listen(3001, () => console.log(`Server has started.`));
